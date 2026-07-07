@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Good Shepherd Old People Home</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<%- include("partials/header") %>
+
+</body>
+</html>
+
+    <title>Donation Details</title>
+    
+    <!-- INTERNAL CSS BLOCK -->
+    <style>
+        /* Base page styling */
+        .donation-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #333;
+        }
+
+        .donation-container h2 {
+            text-align: center;
+            color: #111;
+            margin-bottom: 8px;
+            font-size: 2rem;
+        }
+
+        .donation-container .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        /* 2-Column Responsive Grid Layout */
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Information Cards styling */
+        .info-card {
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            margin-bottom: 24px;
+            color: #0070f3;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        /* Text layout block styling */
+        .detail-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .detail-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .value {
+            font-size: 1.05rem;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        /* Interactive Phone and Email Links */
+        .contact-link {
+            color: #0070f3;
+            text-decoration: none;
+            transition: color 0.2s;
+            display: inline-block;
+            margin-bottom: 6px;
+            width: fit-content;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+            color: #0051a8;
+        }
+
+        /* Dynamic Clipboard Copy Container Box */
+        .copy-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f7f9fa;
+            border: 1px dashed #cbd5e1;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-top: 4px;
+        }
+
+        .value.number {
+            font-family: monospace;
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Copy Button styling */
+        .copy-btn {
+            background: #0070f3;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: #0051a8;
+        }
+
+        /* Dynamic validation color change */
+        .copy-btn.copied {
+            background: #10b981;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML SECTION -->
+    <section class="donation-container">
+        <h2>Make a Donation</h2>
+        <p class="subtitle">Thank you for supporting the Good Shepherd orphans and old people house. Your generosity changes lives.</p>
+
+        <div class="donation-grid">
+            <!-- Account Details Card -->
+            <div class="info-card">
+                <h3>Account Details</h3>
+                <div class="detail-group">
+                    <span class="label">Bank</span>
+                    <span class="value">First Bank Nig PLC</span>
+                </div>
+                <div class="detail-group">
+                    <span class="label">Account Name</span>
+                    <span class="value">Good Shepherd orphans and old people house</span>
+                </div>
+                <div class="detail-group">
+                    <span class="label">Account No</span>
+                    <div class="copy-box">
+                        <span id="account-number" class="value number">3061960889</span>
+                        <button type="button" class="copy-btn" onclick="copyAccountNumber()">
+                            <span id="copy-text">Copy</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Details Card -->
+            <div class="info-card">
+                <h3>Contact</h3>
+                <div class="detail-group">
+                    <span class="label">Tel</span>
+                    <a href="tel:+2347067412656" class="value contact-link">📞 +234 706 741 2656</a>
+                    <a href="tel:+2348060285591" class="value contact-link">📞 +234 806 028 5591</a>
+                </div>
+                <div class="detail-group">
+                    <span class="label">Email</span>
+                    <a href="mailto:anakyco@gmail.com" class="value contact-link">✉️ anakyco@gmail.com</a>
+                </div>
+                <div class="detail-group">
+                    <span class="label">Address</span>
+                    <span class="value">📍 CAC1 Bako Kwali FCT NIG.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERNAL JAVASCRIPT BLOCK -->
+    <script>
+        function copyAccountNumber() {
+            // Find the account number from the HTML structure
+            const accountNumberText = document.getElementById("account-number").innerText;
+            
+            // Push text to system clipboard
+            navigator.clipboard.writeText(accountNumberText).then(() => {
+                const copyBtn = document.querySelector(".copy-btn");
+                const copyText = document.getElementById("copy-text");
+                
+                // Toggle confirmation message and styling
+                copyText.innerText = "Copied!";
+                copyBtn.classList.add("copied");
+                
+                // Reset to default after 2 seconds
+                setTimeout(() => {
+                    copyText.innerText = "Copy";
+                    copyBtn.classList.remove("copied");
+                }, 2000);
+            }).catch(err => {
+                console.error("Error copying text: ", err);
+            });
+        }
+    </script>
+
+</body>
+</html>

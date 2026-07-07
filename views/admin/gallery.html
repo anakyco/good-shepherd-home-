@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery Management</title>
+
+<link rel="stylesheet" href="/css/admin/gallery.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1><i class="fas fa-images"></i> Gallery Management</h1>
+
+<p>
+
+Upload, edit and manage all gallery images from this page.
+
+</p>
+
+<hr>
+
+<h2>Upload New Image</h2>
+
+<form action="/gallery/upload"
+method="POST"
+enctype="multipart/form-data">
+
+<label>Image Title</label>
+
+<input
+type="text"
+name="title"
+required>
+
+<label>Description</label>
+
+<textarea
+name="description"></textarea>
+
+<label>Category</label>
+
+<select name="category">
+
+<option>Elderly Care</option>
+
+<option>Medical Care</option>
+
+<option>Feeding Programme</option>
+
+<option>Volunteers</option>
+
+<option>Events</option>
+
+<option>Donations</option>
+
+</select>
+
+<label>Select Image</label>
+
+<input
+type="file"
+name="image"
+required>
+
+<button type="submit">
+
+<i class="fas fa-upload"></i>
+
+Upload Image
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>Uploaded Images</h2>
+
+<div id="gallery-list">
+
+<p>Images will appear here.</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

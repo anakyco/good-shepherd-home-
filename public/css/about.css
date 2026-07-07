@@ -1,0 +1,824 @@
+/* ===========================
+   General
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f7f7;
+    color:#333;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+header{
+    width:100%;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+
+    width:90%;
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+.logo h2{
+
+    color:#0B7A2F;
+
+    font-size:30px;
+
+}
+
+.navbar ul{
+
+    list-style:none;
+
+    display:flex;
+
+}
+
+.navbar ul li{
+
+    margin-left:30px;
+
+}
+
+.navbar ul li a{
+
+    color:#333;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.navbar ul li a:hover{
+
+    color:#0B7A2F;
+
+}
+
+.active{
+
+    color:#0B7A2F !important;
+
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero{
+
+    height:500px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url("/images/about-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero-content{
+
+    width:70%;
+
+}
+
+.hero h1{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    margin-bottom:35px;
+
+}
+
+.btn{
+
+    background:#0B7A2F;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#095c24;
+
+}
+/* ===========================
+   Our Story
+=========================== */
+
+.story{
+
+    width:90%;
+    margin:80px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+}
+
+.story-text{
+
+    flex:1;
+
+}
+
+.story-text h2{
+
+    color:#0B7A2F;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+.story-text p{
+
+    font-size:18px;
+
+    text-align:justify;
+
+}
+
+.story-image{
+
+    flex:1;
+
+}
+
+.story-image img{
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+}
+
+/* ===========================
+   Mission & Vision
+=========================== */
+
+.mission-vision{
+
+    width:90%;
+    margin:80px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card i{
+
+    font-size:60px;
+
+    color:#0B7A2F;
+
+    margin-bottom:20px;
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    color:#0B7A2F;
+
+}
+
+/* ===========================
+   Core Values
+=========================== */
+
+.values{
+
+    width:90%;
+
+    margin:80px auto;
+
+    text-align:center;
+
+}
+
+.values h2{
+
+    font-size:40px;
+
+    color:#0B7A2F;
+
+    margin-bottom:40px;
+
+}
+
+.value-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.value-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:10px;
+
+    font-size:45px;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.value-card:hover{
+
+    background:#0B7A2F;
+
+    color:white;
+
+    transform:scale(1.05);
+
+}
+
+.value-card h3{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    margin-top:80px;
+
+    background:#0B7A2F;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.story{
+
+    flex-direction:column;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.navbar{
+
+    flex-direction:column;
+
+}
+
+.navbar ul{
+
+    flex-direction:column;
+
+    margin-top:20px;
+
+}
+
+.navbar ul li{
+
+    margin:12px 0;
+
+}
+
+}
+/* ===========================================
+   OBJECTIVES
+=========================================== */
+
+.objectives{
+
+    width:90%;
+    margin:80px auto;
+
+}
+
+.objectives h2{
+
+    text-align:center;
+    color:#2E8B57;
+    font-size:42px;
+    margin-bottom:50px;
+
+}
+
+.objective-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+
+}
+
+.objective-card{
+
+    background:#fff;
+    padding:35px;
+    text-align:center;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.objective-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.objective-card i{
+
+    font-size:60px;
+    color:#2E8B57;
+    margin-bottom:20px;
+
+}
+
+.objective-card h3{
+
+    margin-bottom:15px;
+
+    color:#2E8B57;
+
+}
+
+.objective-card p{
+
+    color:#666;
+
+}
+
+
+/* ===========================================
+   WHY CHOOSE US
+=========================================== */
+
+.choose-us{
+
+    width:90%;
+    margin:100px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+.choose-image{
+
+    flex:1;
+
+}
+
+.choose-image img{
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+}
+
+.choose-content{
+
+    flex:1;
+
+}
+
+.choose-content h2{
+
+    color:#2E8B57;
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+.choose-content ul{
+
+    list-style:none;
+
+}
+
+.choose-content ul li{
+
+    margin-bottom:18px;
+
+    font-size:20px;
+
+}
+
+
+/* ===========================================
+   TEAM
+=========================================== */
+
+.team{
+
+    width:90%;
+
+    margin:100px auto;
+
+    text-align:center;
+
+}
+
+.team h2{
+
+    color:#2E8B57;
+
+    font-size:42px;
+
+    margin-bottom:50px;
+
+}
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+.member{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.member:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.member img{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+}
+
+.member h3{
+
+    color:#2E8B57;
+
+    margin-bottom:10px;
+
+}
+
+
+/* ===========================================
+   STATISTICS
+=========================================== */
+
+.statistics{
+
+    background:#2E8B57;
+
+    color:white;
+
+    padding:90px 0;
+
+    margin-top:90px;
+
+}
+
+.statistics h2{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+    font-size:42px;
+
+}
+
+.stats-grid{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.stat{
+
+    text-align:center;
+
+}
+
+.stat h1{
+
+    font-size:60px;
+
+    margin-bottom:10px;
+
+}
+
+
+/* ===========================================
+   TESTIMONIAL
+=========================================== */
+
+.testimonial{
+
+    width:80%;
+
+    margin:100px auto;
+
+    text-align:center;
+
+}
+
+.testimonial h2{
+
+    color:#2E8B57;
+
+    margin-bottom:40px;
+
+    font-size:40px;
+
+}
+
+.testimonial-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+
+}
+
+.testimonial-card p{
+
+    font-size:22px;
+
+    font-style:italic;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ===========================================
+   CALL TO ACTION
+=========================================== */
+
+.cta{
+
+    background:#2E8B57;
+
+    color:white;
+
+    text-align:center;
+
+    padding:90px 20px;
+
+}
+
+.cta h2{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    font-size:20px;
+
+    margin-bottom:35px;
+
+}
+
+.cta .btn{
+
+    display:inline-block;
+
+    margin:10px;
+
+    background:white;
+
+    color:#2E8B57;
+
+    font-weight:bold;
+
+}
+
+.cta .btn:hover{
+
+    background:#D4AF37;
+
+    color:white;
+
+}
+
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media(max-width:768px){
+
+.choose-us{
+
+    flex-direction:column;
+
+}
+
+.choose-content{
+
+    text-align:center;
+
+}
+
+.choose-content ul{
+
+    text-align:left;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.objectives h2,
+.team h2,
+.statistics h2,
+.cta h2{
+
+    font-size:32px;
+
+}
+
+}

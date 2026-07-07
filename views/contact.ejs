@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Good Shepherd Old People Home</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<%- include("partials/header") %>
+
+</body>
+</html>
+<section class="contact-container">
+
+    <h2>📞 Contact Us</h2>
+
+    <p>
+        We'd love to hear from you soon. Whether you want to donate, volunteer,
+        partner with us, or ask a question, please send us a message.
+    </p>
+
+    <form class="contact-form" action="/contact" method="POST">
+        <input type="hidden" name="returnUrl" value="/contact">
+         
+        <input type="text" name="fullName" placeholder="Full Name" required>
+
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <input type="tel" name="phone" placeholder="Phone Number">
+
+        <input type="text" name="subject" placeholder="Subject" required>
+
+        <textarea name="message" rows="6" placeholder="Write Your Message Here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <% if(success){ %>
+        <div class="success-box">
+            ✅ Thank you! Your message has been sent successfully. We shall get back to you shortly.
+        </div>
+    <% } %>
+
+    <% if(error){ %>
+        <div class="error-box">
+            Unable to send your message. Please try again.
+        </div>
+    <% } %>
+
+</section>
+
+
+<!-- Google Map -->
+
+<section class="map-section">
+
+    <h2>Find Us</h2>
+
+    <p>
+        Visit Good Shepherd Old People Home, Bako, Kwali Area Council,
+        Federal Capital Territory, Abuja.
+    </p>
+
+    <div class="map-container">
+
+        <iframe
+            src="https://www.google.com/maps?q=Bako,+Kwali,+Abuja&output=embed"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+</section>
+<!-- Footer -->
+
+<%- include("partials/footer") %>
+
+</body>
+</html>

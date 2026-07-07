@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Good Shepherd Old People Home</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/gallery.css">
+
+</head>
+
+<body>
+
+<%- include("partials/header") %>
+
+<section class="gallery-banner">
+
+    <h1>📸 Our Gallery</h1>
+
+    <p>
+        Explore memorable moments, love, care, compassion and activities
+        shared with our elderly residents.
+    </p>
+
+</section>
+<div class="gallery-filter">
+
+    <button class="filter-btn active" onclick="filterGallery('all')">
+        All
+    </button>
+
+    <button class="filter-btn" onclick="filterGallery('Residents')">
+        Residents
+    </button>
+
+    <button class="filter-btn" onclick="filterGallery('Events')">
+        Events
+    </button>
+
+    <button class="filter-btn" onclick="filterGallery('Donations')">
+        Donations
+    </button>
+
+    <button class="filter-btn" onclick="filterGallery('Visitors')">
+        Visitors
+    </button>
+
+</div>
+<section class="gallery-container">
+
+    <% if(gallery.length === 0){ %>
+
+        <div class="empty-gallery">
+
+            <h2>No Gallery Images Available Yet.</h2>
+
+            <p>
+                Pictures uploaded by the administrator will appear here automatically.
+            </p>
+
+        </div>
+
+    <% } %>
+
+    <div class="gallery-grid">
+
+        <% gallery.forEach(item=>{ %>
+
+        <div class="gallery-card"
+     data-category="<%= item.category %>">
+            <img
+    src="<%= item.image %>"
+    alt="<%= item.title %>"
+    class="gallery-image"
+    onclick="openImage('<%= item.image %>')">
+            <div class="gallery-content">
+
+                <h3><%= item.title %></h3>
+
+                <span class="category">
+
+              <%= item.category %>
+
+               </span>
+
+                <p>
+
+                    <%= item.description %>
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <% }) %>
+
+    </div>
+
+</section>
+
+<%- include("partials/footer") %>
+<!-- Image Lightbox -->
+
+<div id="lightbox">
+
+    <span class="close-btn" onclick="closeImage()">&times;</span>
+
+    <img id="lightbox-image">
+
+</div>
+
+<script>
+
+function openImage(image){
+
+    document.getElementById("lightbox").style.display="flex";
+
+    document.getElementById("lightbox-image").src=image;
+
+}
+
+function closeImage(){
+
+    document.getElementById("lightbox").style.display="none";
+
+}
+
+window.onclick=function(event){
+
+    let box=document.getElementById("lightbox");
+
+    if(event.target===box){
+
+        box.style.display="none";
+
+    }
+
+}
+
+
+function filterGallery(category){
+
+    const cards = document.querySelectorAll(".gallery-card");
+
+    cards.forEach(card=>{
+
+        if(category==="all"){
+
+            card.style.display="block";
+
+        }
+
+        else{
+
+            if(card.dataset.category===category){
+
+                card.style.display="block";
+
+            }
+
+            else{
+
+                card.style.display="none";
+
+            }
+
+        }
+
+    });
+
+    document.querySelectorAll(".filter-btn").forEach(btn=>{
+
+        btn.classList.remove("active");
+
+    });
+
+    event.target.classList.add("active");
+
+}
+
+</script>
+
+</body>
+
+</html>

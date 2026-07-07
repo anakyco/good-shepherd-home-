@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Good Shepherd Home</title>
+
+    <link rel="stylesheet" href="/css/admin/dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>🏡 Good Shepherd</h2>
+            <p>Administrator</p>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/admin/dashboard">
+                    <i class="fas fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="/admin/gallery">
+                    <i class="fas fa-image"></i>
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="/admin/blog">
+                    <i class="fas fa-newspaper"></i>
+                    Blog
+                </a>
+            </li>
+
+            <li>
+                <a href="/admin/residents">
+                    <i class="fas fa-users"></i>
+                    Residents
+                </a>
+            </li>
+
+            <li>
+                <a href="/admin/staff">
+                    <i class="fas fa-user-tie"></i>
+                    Staff
+                </a>
+            </li>
+
+            <li>
+                <a href="/admin/volunteers">
+                    <i class="fas fa-handshake"></i>
+                    Volunteers
+                </a>
+            </li>
+
+            <li>
+                <a href="/admin/donations">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    Donations
+                </a>
+            </li>
+
+            <li>
+                <a href="/admin/messages">
+                    <i class="fas fa-envelope"></i>
+                    Messages
+                </a>
+            </li>
+
+            <li>
+                <a href="/admin/settings">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </li>
+
+            <li>
+                <a href="/logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Top Bar -->
+
+        <header class="topbar">
+
+            <h1>Dashboard</h1>
+
+            <div class="admin-info">
+
+                Welcome Administrator
+
+            </div>
+
+        </header>
+
+        <!-- Statistic Cards -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <i class="fas fa-image"></i>
+
+                < <h2><%= galleryCount %></h2>
+
+                <p>Gallery Images</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-users"></i>
+
+                <h2>0</h2>
+
+                <p>Residents</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-hand-holding-heart"></i>
+
+                <h2>₦0</h2>
+
+                <p>Total Donations</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-user-friends"></i>
+
+                <h2>0</h2>
+
+                <p>Volunteers</p>
+
+            </div>
+
+        </section>
+                <!-- Welcome Panel -->
+
+        <section class="welcome-panel">
+
+            <div class="welcome-text">
+
+                <h2>Welcome to Good Shepherd Home</h2>
+
+                <p>
+                    This administration dashboard allows you to manage every
+                    aspect of the Good Shepherd Old People's Home website.
+                    From here you can upload gallery images, publish blog
+                    articles, manage residents, monitor donations,
+                    supervise volunteers and staff, and respond to
+                    visitors' enquiries.
+                </p>
+
+                <p>
+                    Our mission is to provide quality care, shelter,
+                    healthcare, food and love to elderly people across Nigeria.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Activities -->
+
+        <section class="recent-activities">
+
+            <h2>Recent Activities</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date</th>
+
+                        <th>Activity</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>--</td>
+
+                        <td>No recent activity</td>
+
+                        <td>Pending</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>--</td>
+
+                        <td>Gallery upload</td>
+
+                        <td>Waiting</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>--</td>
+
+                        <td>Donation records</td>
+
+                        <td>Waiting</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Quick Actions -->
+
+        <section class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="action-buttons">
+
+                <a href="/admin/gallery" class="btn">
+                    📸 Upload Gallery
+                </a>
+
+                <a href="/admin/blog" class="btn">
+                    📝 New Blog
+                </a>
+
+                <a href="/admin/residents" class="btn">
+                    👴 Add Resident
+                </a>
+
+                <a href="/admin/donations" class="btn">
+                    ❤️ View Donations
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

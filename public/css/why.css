@@ -1,0 +1,280 @@
+/* =============================================
+   why.css — Good Shepherd Old People Home
+   ============================================= */
+
+/* ---------- VARIABLES ---------- */
+:root {
+  --green:        #2b5e3f;
+  --green-hover:  #3d7a56;
+  --gold:         #c8882e;
+  --cream:        #fdf8f2;
+  --white:        #ffffff;
+  --text:         #1e2b22;
+  --text-soft:    #4a5e52;
+  --card-bg:      #ffffff;
+  --radius:       14px;
+  --shadow:       0 4px 22px rgba(43, 94, 63, 0.10);
+  --transition:   0.25s ease;
+}
+
+/* ---------- RESET ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.75;
+}
+
+/* =============================================
+   HEADER & NAVBAR
+   ============================================= */
+header {
+  background: var(--green);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.20);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 65px;
+  gap: 1rem;
+}
+
+.logo h2 {
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--white);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 0.42rem 0.85rem;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background var(--transition), color var(--transition);
+}
+
+.navbar ul li a:hover {
+  background: var(--green-hover);
+  color: var(--white);
+}
+
+.navbar ul li a.active {
+  background: var(--gold);
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  background:
+    linear-gradient(160deg, rgba(43,94,63,0.85) 0%, rgba(200,136,46,0.55) 100%),
+    url('/images/hero-why.jpg') center / cover no-repeat;
+  background-color: var(--green); /* fallback */
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: rgba(255,255,255,0.93);
+  font-style: italic;
+}
+
+/* =============================================
+   WHY SECTION — 2-COLUMN GRID
+   ============================================= */
+.why-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* =============================================
+   WHY CARDS
+   ============================================= */
+.why-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2.2rem 2rem;
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--green);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(43, 94, 63, 0.16);
+}
+
+/* Gold accent on even cards */
+.why-card:nth-child(even) {
+  border-top-color: var(--gold);
+}
+
+.why-card .emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.why-card h2 {
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1.35;
+}
+
+.why-card:nth-child(even) h2 {
+  color: var(--gold);
+}
+
+.why-card p {
+  font-size: 0.96rem;
+  color: var(--text-soft);
+  line-height: 1.85;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: var(--green);
+  color: rgba(255,255,255,0.80);
+  text-align: center;
+  padding: 1.4rem 1.5rem;
+  font-size: 0.88rem;
+}
+
+/* =============================================
+   RESPONSIVE — TABLET  ≤ 900px
+   ============================================= */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    min-height: unset;
+  }
+
+  .logo h2 {
+    text-align: center;
+  }
+
+  .navbar ul {
+    justify-content: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .why-section {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.25rem 3.5rem;
+    gap: 1.5rem;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE  ≤ 600px
+   ============================================= */
+@media (max-width: 600px) {
+  .navbar ul li a {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .hero {
+    min-height: 250px;
+    padding: 3rem 1rem;
+  }
+
+  .why-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .why-card .emoji {
+    font-size: 1.9rem;
+  }
+
+  .why-card h2 {
+    font-size: 1.08rem;
+  }
+
+  .why-card p {
+    font-size: 0.93rem;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — SMALL PHONE  ≤ 400px
+   ============================================= */
+@media (max-width: 400px) {
+  .logo h2 {
+    font-size: 1.1rem;
+  }
+
+  .navbar ul li a {
+    font-size: 0.76rem;
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .why-card { transition: none; }
+  html { scroll-behavior: auto; }
+}

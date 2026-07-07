@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Good Shepherd Old People Home</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<%- include("partials/header") %>
+
+</body>
+</html>
+<!-- HOME PAGE CONTENT STARTS HERE -->
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h2>Giving Hope, Love and Care to the Elderly</h2>
+
+        <p>
+            Every elderly person deserves love, dignity, proper care and a safe home.
+            Your generous donation helps us provide food, shelter, medical care and hope
+            to abandoned elderly men and women across Nigeria.
+        </p>
+
+        <a href="/donate" class="donate-btn">
+            ❤️ Donate Now
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Flip Cards Section -->
+
+<section class="flip-section">
+
+    <h2>Our Mission of Compassion</h2>
+
+    <div class="flip-container">
+
+        <div class="flip-card">
+
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="/images/old_man.png" alt="Old Man">
+                </div>
+
+                <div class="flip-card-back">
+                    <h3>Care</h3>
+                    <p>
+                        We provide daily care, companionship, and dignity for elderly men who have been abandoned or have no one to care for them.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="flip-card">
+
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="/images/old_woman.png" alt="Old Woman">
+                </div>
+
+                <div class="flip-card-back">
+                    <h3>Love</h3>
+                    <p>
+                        Every elderly woman deserves love, nutritious meals, medical attention, and a safe place to call home.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="flip-card">
+
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="/images/house.png" alt="Home">
+                </div>
+
+                <div class="flip-card-back">
+                    <h3>Hope</h3>
+                    <p>
+                        With your support, we are building a comfortable home where vulnerable elderly people can live in peace and dignity.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Why Your Support Matters -->
+
+<section class="support">
+
+    <h2>❤️ Why Your Support Matters</h2>
+
+    <div class="support-box">
+
+        <div class="support-item">
+
+            <h3>🍲 Feeding the Elderly</h3>
+
+            <p>
+                Hundreds of elderly men and women go to bed hungry every day.
+                Your donation helps us provide nutritious meals and clean drinking water.
+            </p>
+
+        </div>
+
+        <div class="support-item">
+
+            <h3>🏥 Medical Care</h3>
+
+            <p>
+                Many elderly people suffer from untreated illnesses because they cannot afford healthcare.
+                We provide regular medical checkups, medication and compassionate care.
+            </p>
+
+        </div>
+
+        <div class="support-item">
+
+            <h3>🏠 Safe Shelter</h3>
+
+            <p>
+                Every elderly person deserves a safe and peaceful home where they can live with dignity, security and love.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Founder Section -->
+
+<section class="founder">
+
+    <div class="founder-image">
+
+        <img src="/images/rita_picture.png" alt="Rev. Sis. Rita Ibekwe">
+
+    </div>
+
+    <div class="founder-content">
+
+        <h2>Meet Our Founder</h2>
+
+        <h3>Rev. Sis. Rita Ibekwe</h3>
+
+        <p>
+            Since 2011, Rev. Sis. Rita Ibekwe has dedicated her life to caring for
+            abandoned elderly men and women in Nigeria. What began as a simple act
+            of compassion has grown into a mission of hope, restoring dignity,
+            providing shelter, nutritious meals, healthcare, and love to those who
+            have nowhere else to turn.
+        </p>
+
+        <p>
+            Every smile on the face of an elderly person reminds us that kindness
+            can transform lives. Through the Good Shepherd Old People Home, we
+            continue to serve with compassion, faith, and commitment.
+        </p>
+
+        <a href="/about" class="read-btn">Read More</a>
+
+    </div>
+
+</section>
+<!-- Get Involved Section -->
+
+<section class="involve">
+
+    <div class="involve-image">
+
+        <img src="/images/house_2.png" alt="Building Project">
+
+    </div>
+
+    <div class="involve-content">
+
+        <h2>🏗️ Get Involved Now</h2>
+
+        <p>
+            We are currently building a larger and more comfortable home for
+            abandoned elderly men and women. Every block laid, every roof
+            installed, and every room completed brings hope to someone who has
+            nowhere else to call home.
+        </p>
+
+        <p>
+            Your donation, volunteer service, or partnership can help us complete
+            this project and provide a safe, loving environment where our elderly
+            residents can live with dignity and peace.
+        </p>
+
+        <h3>Building Progress</h3>
+
+        <div class="progress-bar">
+
+            <div class="progress">
+                35% Completed
+            </div>
+
+        </div>
+
+        <br>
+
+        <a href="/donate" class="donate-btn">
+            ❤️ Donate to the Building Project
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Contact Section -->
+
+<section class="contact">
+
+    <h2>📞 Contact Us</h2>
+
+    <p>
+        We'd love to hear from you. Whether you want to donate, volunteer,
+        partner with us, or ask a question, please send us a message.
+    </p>
+
+    <form class="contact-form" action="/contact" method="POST">
+    <input
+    type="hidden"
+    name="returnUrl"
+    value="/">
+    
+    <input
+        type="text"
+        name="fullName"
+        placeholder="Full Name"
+        required>
+
+    <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
+
+    <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number">
+
+    <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        required>
+
+    <textarea
+        name="message"
+        rows="6"
+        placeholder="Write Your Message Here..."
+        required></textarea>
+
+    <button type="submit">
+        Send Message
+    </button>
+
+</form>
+
+</section>
+
+<!-- Footer -->
+
+<%- include("partials/footer") %>
+
+</body>
+</html>
