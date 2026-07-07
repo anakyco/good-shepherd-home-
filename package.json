@@ -1,36 +1,29 @@
 {
-  "name": "good-shepher-home",
-  "version": "1.0.0",
-  "description": "Good Shepherd Old People Home Website",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
-  },
-  "keywords": [
-    "charity",
-    "elderly",
-    "nodejs",
-    "express",
-    "mongodb"
+  "name": "wrappy",
+  "version": "1.0.2",
+  "description": "Callback wrapping utility",
+  "main": "wrappy.js",
+  "files": [
+    "wrappy.js"
   ],
-  "author": "Homeland Edu & Tech",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "cors": "^2.8.5",
-    "dotenv": "^17.4.2",
-    "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "express-session": "^1.18.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.18.0",
-    "mongoose": "^8.18.0",
-    "multer": "^2.0.2",
-    "nodemailer": "^7.0.5"
+  "directories": {
+    "test": "test"
   },
-  "engines": {
-    "node": ">=20"
-  }
+  "dependencies": {},
+  "devDependencies": {
+    "tap": "^2.3.1"
+  },
+  "scripts": {
+    "test": "tap --coverage test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/wrappy"
+  },
+  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/wrappy/issues"
+  },
+  "homepage": "https://github.com/npm/wrappy"
 }
