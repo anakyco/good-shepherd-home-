@@ -8,7 +8,7 @@ const galleryController = require("../controllers/galleryController");
 
 
 // Public Gallery
-router.get("/gallery-data", galleryController.getGallery);
+router.get("/gallery-data", galleryController.getgallery);
 
 
 // Upload Image
