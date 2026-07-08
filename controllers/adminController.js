@@ -1,4 +1,4 @@
-const Gallery = require("../models/Gallery");
+const Gallery = require("../models/gallery");
 
 const dashboard = async (req, res) => {
 
