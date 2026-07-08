@@ -3,7 +3,7 @@ const session = require("express-session");
 const path = require("path");
 const authRouter = require("./router/auth");
 const adminRouter = require("./router/admin");
-const Gallery = require("./models/Gallery");
+const Gallery = require("./models/gallery");
 const contactController = require("./controllers/contactController");
 
 require("dotenv").config();
