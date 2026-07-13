@@ -1,195 +1,212 @@
-/* ==========================================
-   MOBILE RESPONSIVE DESIGN
-========================================== */
+/* ===========================
+HEADER
+=========================== */
 
-@media screen and (max-width:768px){
+header{
 
-    /* Header */
-    .top-header{
-        flex-direction:column;
-        text-align:center;
-        padding:20px 10px;
-    }
+    width:100%;
 
-    .logo img{
-        width:110px;
-        height:110px;
-        margin:0 auto 15px;
-    }
+    position:sticky;
 
-    .title h1{
-        font-size:42px;
-        line-height:1.2;
-    }
+    top:0;
 
-    .title p{
-        font-size:20px;
-        margin:8px 0;
-    }
+    z-index:9999;
 
-    /* Navigation */
-    nav ul{
-        flex-direction:column;
-        align-items:center;
-    }
+    background:#fff;
 
-    nav ul li{
-        width:100%;
-        padding:0;
-    }
-
-    nav ul li a{
-        display:block;
-        padding:18px;
-        border-bottom:1px solid rgba(255,255,255,.2);
-    }
-
-    /* Hero */
-    .hero{
-        height:auto;
-        padding:80px 20px;
-    }
-
-    .hero-content{
-        width:100%;
-    }
-
-    .hero h2{
-        font-size:34px;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    .donate-btn{
-        padding:15px 30px;
-        font-size:18px;
-    }
-
-    /* Founder */
-
-    .founder{
-
-        padding:40px 20px;
-
-    }
-
-    .founder-image img{
-
-        width:100%;
-
-    }
-
-    .founder-content{
-
-        width:100%;
-
-    }
-
-    .founder-content h2{
-
-        font-size:30px;
-
-    }
-
-    /* Get Involved */
-
-    .involve{
-
-        padding:40px 20px;
-
-    }
-
-    .involve-image img{
-
-        width:100%;
-
-    }
-
-    .involve-content{
-
-        width:100%;
-
-    }
-
-    /* Contact */
-
-    .contact-form{
-
-        width:95%;
-
-    }
-
-    /* Footer */
-
-    .footer-box{
-
-        width:100%;
-
-        text-align:center;
-
-    }
-
-}
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
 }
 
 .top-header{
+
     display:flex;
+
+    justify-content:space-between;
+
     align-items:center;
+
+    padding:12px 30px;
+
     background:#006400;
+
     color:white;
-    padding:15px;
+
 }
 
 .logo img{
+
     width:90px;
+
     height:90px;
+
     border-radius:50%;
-    margin-right:20px;
+
+}
+
+.title{
+
+    flex:1;
+
+    margin-left:20px;
+
 }
 
 .title h1{
+
     margin:0;
+
+    font-size:34px;
+
 }
 
-marquee{
-    background:#FFD700;
-    color:#b30000;
-    font-weight:bold;
-    padding:10px;
+.title p{
+
+    margin:5px 0;
+
 }
+
+.menu-btn{
+
+    display:none;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+/* Navigation */
 
 nav{
+
     background:#004d00;
+
 }
 
 nav ul{
-    margin:0;
-    padding:0;
-    list-style:none;
+
     display:flex;
+
     justify-content:center;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
 }
 
 nav ul li{
-    padding:18px;
+
+    padding:18px 22px;
+
 }
 
 nav ul li a{
+
     color:white;
+
     text-decoration:none;
+
     font-weight:bold;
+
 }
 
 nav ul li:hover{
+
     background:#FFD700;
+
 }
 
+nav ul li:hover a{
+
+    color:black;
+
+}
+
+/* ===========================
+PHONE
+=========================== */
+
+@media(max-width:768px){
+
+.top-header{
+
+    flex-wrap:wrap;
+
+    text-align:center;
+
+}
+
+.logo{
+
+    width:100%;
+
+}
+
+.logo img{
+
+    width:80px;
+
+    height:80px;
+
+}
+
+.title{
+
+    width:100%;
+
+    margin:15px 0;
+
+}
+
+.title h1{
+
+    font-size:24px;
+
+}
+
+.menu-btn{
+
+    display:block;
+
+    position:absolute;
+
+    right:20px;
+
+    top:25px;
+
+}
+
+nav{
+
+    display:none;
+
+}
+
+nav.active{
+
+    display:block;
+
+}
+
+nav ul{
+
+    flex-direction:column;
+
+}
+
+nav ul li{
+
+    border-bottom:1px solid rgba(255,255,255,.2);
+
+    text-align:center;
+
+}
+
+}
 nav ul li:hover a{
     color:black;
 }
